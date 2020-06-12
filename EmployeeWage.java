@@ -11,19 +11,21 @@ class EmployeeWage
 		int FULL_TIME=1;
 		int DAILY_WAGE;
 		double empCheck=Math.floor(Math.random() *10)%3;
-		System.out.println(empCheck);
-		if(empCheck == FULL_TIME)
+		int randomCheck=(int)empCheck;
+
+		switch (randomCheck)
 		{
+		case 1:
+
 			DAILY_WAGE=WAGE_PER_HOUR * FULL_DAY_HOUR;
 			System.out.println("Employee's Daily wage for full time is : " + DAILY_WAGE);
-		}
-		else if (empCheck == PART_TIME)
-		{
+		break;
+		case 2:
+
 			DAILY_WAGE=WAGE_PER_HOUR * PART_TIME_HOUR;
                         System.out.println("Employee's Daily wage for part time is : " + DAILY_WAGE);
-		}
-		else
-		{
+		break;
+		default:
 			System.out.println("Employee is absent.");
 		}
 	}
